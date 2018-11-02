@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="ejer2.css">
+    <title></title>
+    <script>
+        window.onload = function() {
+    var files = document.querySelectorAll("input[type=file]");
+    files[0].addEventListener("change", function(e) {
+        if(this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) { document.getElementById("preview").setAttribute("src", e.target.result); }
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+}
+    </script>
+
+</head>
+
+<body>
+    <h2>Por favor, introduce tus datos.</h2>
+    <form>
+        <fieldset class="bordes">
+            <legend>Tu cara</legend>
+            <div>
+                <label for="foto">Foto:</label>
+                <input class="btn" type="file" value="Seleccionar archivo" id="foto" />
+                <br>
+                <label>Previsualización de imagen:</label>
+                <img src="" id="preview">
+                <br>
+            </div>
+        </fieldset>
+        <br>
+        <fieldset class="bordes">
+            <legend>Datos generales</legend>
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required placeholder="Nombre completo">
+                <br>
+                <label>Género:</label>
+                <input type="radio" name="genero" value="Hombre"> Hombre
+                <input type="radio" name="genero" value="Mujer"> Mujer
+                <br>
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad">
+                <br>
+                <label for="nace">Fecha de nacimiento:</label>
+                <input type="date" id="nace">
+                <br>
+                <label for="color">Color favorito:</label>
+                <input type="color" id="color">
+                <br>
+                <label for="pais">País:</label>
+                <select name="pais" id="pais">
+                    <option value="Canada">Canadá</option>
+                    <option value="eeuu">EEUU</option>
+                    <option value="españa">España</option>
+                </select>
+            </div>
+        </fieldset>
+        <br>
+        <fieldset class="bordes">
+            <legend>Otras características</legend>
+            <div>
+                <label>Altura:</label>
+                <span id="rojo">Bajo</span> <input type="range" min="0" max="100" step="5" value="50"> <span id="lila">Alto</span>
+                <br>
+                <label>Salario:</label>
+                <span id="rojo">Pobre</span><input type="range" min="0" max="100" step="5" value="50"><span id="lila"> Rico</span>
+            </div>
+        </fieldset>
+        <br>
+        <fieldset class="bordes">
+            <legend>Información de contacto</legend>
+            <div>
+                <label for="correo">Email:</label>
+                <input type="email" name="Correo-e" id="correo">
+                <br>
+                <label for="movil">Móvil:</label>
+                <input type="number" id="movil">
+                <br>
+                <label for="direccion">Dirección:</label>
+                <textarea rows="4" cols="50" id="direccion">
+                </textarea>
+                <br>
+                <label>Método de contacto:</label>
+                <input type="checkbox" name="contac" value="Email"> Email
+                <input type="checkbox" name="contac" value="Whatsapp"> Whatsapp
+                <input type="checkbox" name="contac" value="skype"> Skype
+                <br>
+            </div>
+        </fieldset>
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+
+</body>
+
+</html>

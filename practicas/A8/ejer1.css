@@ -1,0 +1,28 @@
+body {}
+
+h1 {
+    font-family: arial;
+    color: red
+}
+
+p {
+    color: darkred;
+}
+
+#negrita {
+    color: blueviolet;
+    font-family: times new roman;
+    font-weight: bold;
+}
+
+#cursiva {
+    color: green;
+    font-family: times new roman;
+    font-style: italic;
+}
+
+li {
+    color: yellow;
+    font-family: courier new;
+    background-color: dimgrey;
+}

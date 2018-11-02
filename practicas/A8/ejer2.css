@@ -1,0 +1,27 @@
+body {
+    font-family: arial;
+}
+
+.bordes {
+    border-style: solid;
+    border-color: yellow;
+    border-width: 8px;
+    background-color: beige;
+}
+
+div {
+    margin: .4em 0;
+}
+
+div label {
+    width: 25%;
+    float: left;
+}
+
+#rojo {
+    background-color: red
+}
+
+#lila {
+    background-color: darkviolet;
+}
