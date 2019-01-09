@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Layout responsive</title>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Italianno" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="Style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <header>
+        <h2>Alicia en el pais de las maravillas</h2>
+        <nav class="topnav" id="myTopnav">
+            <a href="index.html">Home</a>
+            <a href="index1.html">Libro</a>
+            <a href="index2.html">Pelicula</a>
+            <a href="index3.html">Multimedia</a>
+            <a href="index4.html">Comprar</a>
+            <a class="active" href="index5.html">Contacta con nosotros</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <form>
+            <fieldset>
+                <legend>Información personal</legend>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="apellidos">Apellidos:</label>
+                    </div>
+                    <div class="col-75 required">
+                        <input type="text" id="apellidos" required placeholder="2 apellidos" autofocus>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="nombre">Nombre:</label>
+                    </div>
+                    <div class="col-75 required">
+                        <input type="text" id="nombre" required placeholder="Nombre completo">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="direccion">Dirección</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="direccion">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="clave">Clave:</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="password" id="clave">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="edad">Edad (mayor que 18):</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="number" min="18" id="edad">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="correo">Correo-e:</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="email" name="Correo-e" id="correo">
+                    </div>
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Libro o Pelicula</legend>
+                <select name="L ó P">
+                    <option value="Libro">Libro</option>
+                    <option value="Peli">Pelicula</option>
+                </select>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Comentarios</legend>
+                <p>¿Te gustó la pagina?</p>
+                <input type="radio" name="respuesta" value="Si"> Si
+                <br>
+                <input type="radio" name="respuesta" value="No"> No
+                <p>Escrbe tus comentario:</p>
+                <textarea cols="30" rows="7" name="comentarios"></textarea>
+            </fieldset>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrar">
+        </form>
+    </main>
+    <footer>
+        <div class="nombre">Julia Fátima Caubín Alonso</div>
+        <div class="creativecommons">
+            <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+            <br />Este obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licencia de Creative Commons Reconocimiento 4.0 Internacional</a>.
+        </div>
+    </footer>
+    <script src="Main.js"></script>
+</body>
+
+</html>
